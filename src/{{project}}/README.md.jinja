@@ -1,0 +1,25 @@
+# {{name}}
+
+This is a [Git scraping](https://simonwillison.net/series/git-scraping/) mirror of Toronto's [{{name}}]({{url}}) data set.
+
+## Database
+
+This project builds an SQLite database of the data, as well as a [Datasette](https://datasette.io/) image to explore the data.
+Download the [latest version](https://github.com/{{repo}}/releases/latest) of database from the [releases](https://github.com/{{repo}}/releases) page.
+
+Run the latest published image with Docker:
+
+```
+docker run -p 8000:8000 ghcr.io/{{repo}}:latest
+```
+
+Or build the database locally and run the image with Docker Compose:
+
+```
+make {{name}}.db
+docker compose up
+```
+
+## Licence
+
+The City of Toronto makes this data available under the terms of [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/).

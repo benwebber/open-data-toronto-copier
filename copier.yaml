@@ -1,0 +1,15 @@
+_subdirectory: src
+
+url:
+  type: str
+name:
+  type: str
+project:
+  type: str
+  default: "open-data-toronto-{{name|lower|replace(' ', '-')}}"
+slug:
+  type: str
+  default: "{{name|lower|replace(' ', '-')|replace('-', '_')}}"
+repo:
+  type: str
+  default: 'benwebber/{{project}}'
