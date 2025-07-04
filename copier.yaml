@@ -1,3 +1,6 @@
+_exclude:
+  - .git
+  - data
 _subdirectory: src
 
 url:
