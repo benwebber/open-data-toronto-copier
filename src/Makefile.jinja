@@ -8,9 +8,6 @@ $(DB):
 %.gz: $(DB)
 	gzip --force --keep --stdout $< >$@
 
-SHA256SUMS: $(DB).gz
-	sha256sum *.gz >$@
-
 .PHONY: clean
 clean:
 	$(RM) -r $(DB) dist/
