@@ -8,6 +8,9 @@ $(DB):
 %.gz: $(DB)
 	gzip --force --keep --stdout $< >$@
 
+requirements.txt:
+	uv pip compile pyproject.toml >requirements.txt
+
 .PHONY: clean
 clean:
 	$(RM) -r $(DB) dist/
