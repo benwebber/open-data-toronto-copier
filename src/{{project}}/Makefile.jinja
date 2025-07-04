@@ -6,7 +6,7 @@ DB := {{slug}}.db
 $(DB):
 
 %.gz: $(DB)
-	gzip --force --keep $< >$@
+	gzip --force --keep --stdout $< >$@
 
 SHA256SUMS: $(DB).gz
 	sha256sum *.gz >$@
