@@ -1,6 +1,10 @@
 _exclude:
   - .git
   - data
+_skip_if_exists:
+  - README.md
+  - metadata.yaml
+  - pyproject.toml
 _subdirectory: src
 
 url:
