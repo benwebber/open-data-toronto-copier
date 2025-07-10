@@ -24,3 +24,5 @@ jobs:
       - name: Trigger release workflow
         run: |-
           gh api /repos/{{ repo }}/actions/workflows/release.yaml/dispatches --raw-field ref="$(git describe --tags HEAD)"
+        env:
+          GH_TOKEN: {% raw %}${{ github.token }}{% endraw %}
